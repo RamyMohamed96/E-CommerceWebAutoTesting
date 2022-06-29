@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: org.example.Runner.Runner
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 171.974 s <<< FAILURE! - in org.example.Runner.Runner
+runScenario(org.example.Runner.Runner)  Time elapsed: 13.4 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	Wrong Message expected [Login was unsuccessful. Please correct the errors and try again.
+The credentials provided are incorrect] but found [Login was unsuccessful. Please correct the errors and try again.
+No customer account found]
+
+runScenario(org.example.Runner.Runner)  Time elapsed: 7.513 s  <<< FAILURE!
+java.lang.AssertionError: URL of First Slide expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+
+runScenario(org.example.Runner.Runner)  Time elapsed: 7.03 s  <<< FAILURE!
+java.lang.AssertionError: URL of Second Slide expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+
+runScenario(org.example.Runner.Runner)  Time elapsed: 10.496 s  <<< FAILURE!
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+

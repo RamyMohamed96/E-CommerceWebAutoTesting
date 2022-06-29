@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="4" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="17" time="171.301">
+<testcase classname="user must be create new account" name="user register with valid data" time="9.927">
+<system-out><![CDATA[Given user navigate to register page........................................passed
+And user choose male or female..............................................passed
+When user enter valid data..................................................passed
+Then user click on register button..........................................passed
+And user Register Successfully..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user login to the system" name="user login with valid data" time="10.043">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user enter "ramorionly96@gmail.com" and "Password"......................passed
+Then user click on login button.............................................passed
+And user login successfully and go to home page.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user login to the system" name="user login with invalid data" time="13.39">
+<failure message="The following asserts failed:&#10;&#9;Wrong Message expected [Login was unsuccessful. Please correct the errors and try again.&#10;The credentials provided are incorrect] but found [Login was unsuccessful. Please correct the errors and try again.&#10;No customer account found]" type="java.lang.AssertionError"><![CDATA[When user navigate to login page............................................passed
+And user enter "ramorionly@gmail.com" and "Passwordddd".....................passed
+Then user click on login button.............................................passed
+And user not login successfully and go to home page.........................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	Wrong Message expected [Login was unsuccessful. Please correct the errors and try again.
+The credentials provided are incorrect] but found [Login was unsuccessful. Please correct the errors and try again.
+No customer account found]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.StepDefinition.SD2Login.cannot_login_successfully(SD2Login.java:59)
+	at ✽.user not login successfully and go to home page(file:///C:/Users/20120/Desktop/proj2/E-CommerceWebAutoTesting/src/main/resources/Features/2-Login.feature:15)
+]]></failure>
+</testcase>
+<testcase classname="user switch between currencies ($, €)" name="guest user can choose € currency" time="13.41">
+<system-out><![CDATA[When user select “Euro” from currency dropdown list.........................passed
+Then all $ sign change to € sign............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="users will be search for products with different parameters" name="user search using valid product name" time="9.673">
+<system-out><![CDATA[Given user click on search bar..............................................passed
+When user search for product "Nokia"........................................passed
+And user click on search Button.............................................passed
+Then user search successfully and go to search page.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="users will be search for products with different parameters" name="user search using SKU" time="10.805">
+<system-out><![CDATA[Given user click on search bar..............................................passed
+When user search for product "AP_MBP_13"....................................passed
+And user click on search Button.............................................passed
+Then user search successfully with SKU......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="users will be search for products with different parameters" name="user search using invalid product name" time="12.714">
+<system-out><![CDATA[Given user click on search bar..............................................passed
+When user search for product "Xiaomi".......................................passed
+And user click on search Button.............................................passed
+Then user not search........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user hover categories and select subcategory" name="user hover categories" time="7.845">
+<system-out><![CDATA[When user hover category and select subcategory.............................passed
+And user click on subcategory...............................................passed
+Then user go to relative product page.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="users will open sliders in home page" name="First slider clickable on homepage" time="7.51">
+<failure message="URL of First Slide expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on first slider............................................passed
+Then relative product for first slider will displayed.......................failed
+
+StackTrace:
+java.lang.AssertionError: URL of First Slide expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.StepDefinition.SD6HomeSliders.first_slide_displayed(SD6HomeSliders.java:23)
+	at ✽.relative product for first slider will displayed(file:///C:/Users/20120/Desktop/proj2/E-CommerceWebAutoTesting/src/main/resources/Features/6-HomeSliders.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="users will open sliders in home page" name="Second slider clickable on homepage" time="7.026">
+<failure message="URL of Second Slide expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on second slider...........................................passed
+Then relative product for second slider will displayed......................failed
+
+StackTrace:
+java.lang.AssertionError: URL of Second Slide expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.StepDefinition.SD6HomeSliders.second_slide_displayed(SD6HomeSliders.java:37)
+	at ✽.relative product for second slider will displayed(file:///C:/Users/20120/Desktop/proj2/E-CommerceWebAutoTesting/src/main/resources/Features/6-HomeSliders.feature:11)
+]]></failure>
+</testcase>
+<testcase classname="users open followUs links" name="user opens facebook link" time="10.279">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user enter "ramorionly96@gmail.com" and "Password"......................passed
+Then user click on login button.............................................passed
+And user login successfully and go to home page.............................passed
+When user opens facebook link...............................................passed
+Then "https://www.facebook.com/nopCommerce" is opened in new tab............passed
+]]></system-out>
+</testcase>
+<testcase classname="users open followUs links" name="user opens twitter link" time="10.204">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user enter "ramorionly96@gmail.com" and "Password"......................passed
+Then user click on login button.............................................passed
+And user login successfully and go to home page.............................passed
+When user opens twitter link................................................passed
+Then "https://twitter.com/nopCommerce" is opened in new tab.................passed
+]]></system-out>
+</testcase>
+<testcase classname="users open followUs links" name="user opens rss link" time="10.492">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user navigate to login page............................................passed
+And user enter "ramorionly96@gmail.com" and "Password"......................passed
+Then user click on login button.............................................passed
+And user login successfully and go to home page.............................passed
+When user opens rss link....................................................passed
+Then "https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab.failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.StepDefinition.SD7FollowUs.opens_new_tab(SD7FollowUs.java:23)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab(file:///C:/Users/20120/Desktop/proj2/E-CommerceWebAutoTesting/src/main/resources/Features/7-FollowUs.feature:22)
+]]></failure>
+</testcase>
+<testcase classname="users open followUs links" name="user opens youtube link" time="10.436">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user enter "ramorionly96@gmail.com" and "Password"......................passed
+Then user click on login button.............................................passed
+And user login successfully and go to home page.............................passed
+When user opens youtube link................................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened in new tab........passed
+]]></system-out>
+</testcase>
+<testcase classname="guest user add products to wishlist" name="success message will visible after adding item to wishlist" time="8.56">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user enter "ramorionly96@gmail.com" and "Password"......................passed
+Then user click on login button.............................................passed
+And user login successfully and go to home page.............................passed
+When user add item to wishlist..............................................passed
+Then wishlist notification success will visible.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest user add products to wishlist" name="number of wishlist items in home page will increased" time="8.52">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user enter "ramorionly96@gmail.com" and "Password"......................passed
+Then user click on login button.............................................passed
+And user login successfully and go to home page.............................passed
+When user add item to wishlist..............................................passed
+Then wishlist notification success will visible.............................passed
+And user get the number of wishlist items after adding item.................passed
+Then the number of wishlist increased.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest user add products to wishlist" name="added items are display on wishlist" time="10.253">
+<system-out><![CDATA[When user navigate to login page............................................passed
+And user enter "ramorionly96@gmail.com" and "Password"......................passed
+Then user click on login button.............................................passed
+And user login successfully and go to home page.............................passed
+When user add item to wishlist..............................................passed
+Then wishlist notification success will visible.............................passed
+And user get the number of wishlist items after adding item.................passed
+And user go to wishlist page................................................passed
+Then the number of items greater than zero in wishlist page.................passed
+]]></system-out>
+</testcase>
+</testsuite>
